@@ -1,19 +1,10 @@
 using namespace geode::prelude;
 
-#include <Geode/modify/DailyLevelPage.hpp>
+#include <Geode/modify/CreatorLayer.hpp>
 class $modify(CreatorLayer) {
     bool init() {
         if (!CreatorLayer::init()) return false;
-
-		GameManager::get()->m_dailyID = 0;
-		GameManager::get()->m_weeklyID = 0;
-		GameManager::get()->m_eventID = 0;
-
         return true;
-    }
-
-    void onEnter() {
-        CreatorLayer::onEnter();
     }
 };
 
